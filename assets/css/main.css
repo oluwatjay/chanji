@@ -1458,6 +1458,33 @@ body{margin-top:20px;
 
 }
 
+.faq .container{
+  display: flex;
+  justify-content: center;
+}
+
+.faq-inner{
+  width: 60%;
+}
+
+.faq{
+  background-color: #F0F9E3;
+  margin-top: -100px;
+}
+
+
+.accordion-button{
+  background-color: #F0F9E3;
+}
+
+.accordion-button:hover{
+  background-color: #7BA717;
+}
+
+
+.accordion-body{
+  background-color: #F0F9E3;
+}
 .faq .faq-list {
   padding: 0 100px;
 }
@@ -2026,6 +2053,18 @@ h1 span{
  
 }
 
+.wave1{
+  background: url("../img/wave1.png") no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: end center;
+  padding-bottom: 100px;
+ 
+}
+
 .rule{
   display: flex;
   justify-content: center;
@@ -2178,7 +2217,7 @@ h1 span{
 
 
 .wave img {
-  width: 100px;
+  width: 400px;
   height: 100px;
   animation: scroll 60s linear infinite;
 }
