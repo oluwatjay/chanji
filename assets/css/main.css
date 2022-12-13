@@ -133,6 +133,26 @@ section {
   margin-top: 90px;
 }
 
+.about-text p{
+  font-size: 20px;
+  padding: 10px;
+}
+.about-text h1{
+  font-size: 25px;
+  
+}
+
+.about-text h3{
+  font-size: 25px;
+  font-weight: bolder;
+  
+}
+
+.about-text ul{
+  font-size: 20px;
+
+  
+}
 
 
 .about-img img{
@@ -188,6 +208,161 @@ section {
 }
 
 
+.dot1{
+  background-color: #7BA717;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+
+.dot2{
+  background-color: #7BA717;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+}
+
+
+.dot3{
+  background-color: #7BA717;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 65%;
+  left: 40%;
+  filter: blur(15px);
+}
+
+
+.dot4{
+  background-color: #7BA717;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}
+
+.dot5{
+  background-color: #7BA717;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 95%;
+}
+
+.dot6{
+  background-color: #e2e2e2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 75%;
+  left: 55%;
+}
+
+.dot7{
+  background-color: #e2e2e2;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  left: 95%;
+}
+
+
+.dot8{
+  background-color: #7BA717;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 150%;
+  left: 5%;
+}
+
+.dot9{
+  background-color: #7BA717;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 135%;
+  left: 60%;
+}
+
+.dot10{
+  background-color: #7BA717;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 135%;
+  left: 50%;
+}
+
+.dot12{
+  background-color: #7BA717;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 175%;
+  left: 43%;
+  filter: blur(10px);
+}
+
+.dot13{
+  background-color: #e2e2e2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 195%;
+  left: 50%;
+ 
+}
+
+
+.dot14{
+  background-color: #e2e2e2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 195%;
+  left: 95%;
+ 
+}
+
+.dot15{
+  background-color:  #7BA717;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3000px;
+  left: 50%;
+ 
+}
+
+
+.ceo .content{
+  margin-left: 20px;
+}
+
+
 
 
 .newsletter-btn{
@@ -215,7 +390,30 @@ section {
     background-image: url(assets/img/whatwedo.png) ; background-size: 411px 280px;
   }
 
- 
+
+  .about-text p{
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+  }
+  .about-text h1{
+    font-size: 20px;
+    text-align: center;
+    
+  }
+
+  .about-text h3{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    
+  }
+
+  .about-text ul{
+    font-size: 20px;
+  
+    
+  }
 
 
 .recycle .recycle-inner{
@@ -471,6 +669,63 @@ section {
   .header {
     height: 70px;
   }
+.dot1{
+  display: none;
+}
+
+.dot4{
+  display: none;
+}
+
+.dot3{
+  background-color: #7BA717;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  filter: blur(10px);
+}
+
+
+
+.dot8{
+ display: none;
+}
+
+.dot9{
+  background-color: #7BA717;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 300%;
+  left: 1%;
+}
+
+.dot10{
+  display: none;
+
+}
+
+.dot12{
+  display: none;
+
+}
+
+.dot14{
+  display: none;
+
+ 
+}
+
+.dot7{
+  display: none;
+
+}
+
+
 
   footer .logo{
     display: flex;
@@ -1278,6 +1533,8 @@ body{margin-top:20px;
   color: rgba(255, 255, 255, 0.6);
 }
 
+
+
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
@@ -1303,10 +1560,18 @@ body{margin-top:20px;
     padding: 10px 0;
   }
 
+
+ .dhero {
+  display: none;
+}
   .gradient{
    
     padding: 50px;
     margin-top: -100px;
+  }
+
+  .gal{
+    margin-left: -20px;
   }
 
   .gal .example-image-link .example-image{
@@ -1748,6 +2013,32 @@ body{margin-top:20px;
   }
 }
 
+#main .campaign-mobile .camp{
+  display:grid;
+  place-items: center;
+  margin-bottom: 100px;
+}
+
+#main .campaign-mobile .camp h2{
+  font-weight: bold;
+}
+
+#main .campaign-mobile .camp h2 span{
+  color: #7BA717;
+}
+
+.campaign-mobile button{
+  background-color: #7BA717;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+  width: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #download-hero .img-fluid{
   height: 522px;
   width: 300px;
@@ -1972,6 +2263,13 @@ body{margin-top:20px;
     padding: 40px 0;
   }
 
+  #main .campaign-mobile .camp{
+    display:none;
+    place-items: center;
+    margin-bottom: 100px;
+  }
+  
+
   .gallery .swiper-slide-active {
     border: 6px solid var(--color-primary);
     padding: 4px;
@@ -2130,13 +2428,8 @@ body{margin-top:20px;
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
-  width: 100%;
-  background-size: cover;
-  position: relative;
-  min-height: 60vh;
-  padding: 160px 0 60px 0;
-}
+
+
 
 
 .hero h2 {
@@ -2166,6 +2459,8 @@ h1 span{
 }
 
 
+
+
 .about-text{
   font-size: 30px;
   font-weight: 400;
@@ -2174,7 +2469,7 @@ h1 span{
 
 .about-text span{
   color: #7BA717;
-  font-size: 64px;
+  font-size: 25px;
 }
 
 .hero .btn-green {
@@ -2274,6 +2569,14 @@ h1 span{
   color: rgba(206, 18, 18, 0.8);
 }
 
+.dhero {
+  width: 100%;
+  background-image: url("../img/whatwedo.png") ; 
+  background-size: 100% 580px;
+  position: relative;
+  min-height: 60vh;
+  padding: 160px 0 60px 0;
+}
 @media (max-width: 640px) {
   .hero h2 {
     font-size: 36px;
@@ -2442,4 +2745,94 @@ h1 span{
   color: #7BA717;
   font-size: 16px;
   text-decoration: none;
+}
+
+
+
+
+ 
+
+
+header.masthead {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
+header.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.5;
+}
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  color: #fff;
+}
+header.masthead .page-heading,
+header.masthead .site-heading {
+  text-align: center;
+}
+header.masthead .page-heading h1, header.masthead .page-heading .h1,
+header.masthead .site-heading h1,
+header.masthead .site-heading .h1 {
+  font-size: 3rem;
+}
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading h1, header.masthead .post-heading .h1 {
+  font-size: 2.25rem;
+}
+header.masthead .post-heading .meta,
+header.masthead .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+header.masthead .post-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 2rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading .meta {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading .meta a {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .page-heading h1, header.masthead .page-heading .h1,
+header.masthead .site-heading h1,
+header.masthead .site-heading .h1 {
+    font-size: 5rem;
+  }
+  header.masthead .post-heading h1, header.masthead .post-heading .h1 {
+    font-size: 3.5rem;
+  }
+  header.masthead .post-heading .subheading {
+    font-size: 1.875rem;
+  }
 }
