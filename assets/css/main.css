@@ -384,6 +384,10 @@ section {
 }
 
 @media (max-width: 575px) {
+    
+    .faq .faq-inner{
+  width: 90%;
+}
 
   .whatwedo .whatwedo-img {
     height: 380px;
