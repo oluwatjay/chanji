@@ -669,6 +669,21 @@ section {
 
 @media (max-width: 575px) {
 
+  .recycle{
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .recycle-text{
+    width: 300px;
+    text-align: center;
+  }
+
+  .recycle-text h3{
+    font-size: 24px;
+  }
+
   .contact-container{
     margin-top: -100px;
   }
@@ -676,6 +691,7 @@ section {
     width: 350px;
   }
 
+  
   .contact-left{
     margin-left: -15%;
   }
@@ -2313,7 +2329,7 @@ body{margin-top:20px;
 }
 
 .blog-text .big-text{
-  font-size: 64px;
+  font-size: 30px;
 }
 
 .blog-text h1{
