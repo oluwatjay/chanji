@@ -677,11 +677,12 @@ section {
   }
 
   .contact-left{
-    margin-left: -60px;
+    margin-left: -15%;
   }
 
   .contact-container{
-    width: 100%;
+    width: 95%;
+    
   }
 
  
