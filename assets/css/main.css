@@ -668,6 +668,28 @@ section {
 }
 
 @media (max-width: 575px) {
+
+  .contact-container{
+    margin-top: -100px;
+  }
+  .contact-left .form{
+    width: 350px;
+  }
+
+  .contact-left{
+    margin-left: -60px;
+  }
+
+  .contact-container{
+    width: 100%;
+  }
+
+ 
+
+  .contact-left{
+    width: 400px;
+  }
+
   .header {
     height: 70px;
   }
@@ -2319,7 +2341,7 @@ body{margin-top:20px;
 }
 
 .contact-container{
-  margin-top: 300px;
+  margin-top: 20%;
   display: grid;
   place-items: center;
 }
