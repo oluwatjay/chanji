@@ -572,6 +572,13 @@ section {
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
+
+ .phone-img{
+    width: 300px;
+    height: 400px;
+  }
+
+
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -676,6 +683,8 @@ section {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -698,6 +707,19 @@ section {
   }
 
 
+  .download-btn{
+    width: 150px;
+    height: 60px;
+  }
+
+.download-hero h2{
+  font-size: 32px;
+}
+
+  .phone-img{
+    width: 200px;
+    height: 300px;
+  }
   .recybtn{
   padding: 10px;
     width: 150px;
@@ -1633,6 +1655,10 @@ body{margin-top:20px;
 }
 
 
+
+.download-hero h2{
+  font-size: 40px;
+}
 
 /*--------------------------------------------------------------
 # Menu Section
