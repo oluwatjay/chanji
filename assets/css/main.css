@@ -384,13 +384,37 @@ section {
 }
 
 @media (max-width: 575px) {
+
+ 
+
+.wave1{
+  margin-top: -100px;
+}
+
+.faq{
+  margin-top: -200px;
+}
+
 .faq .faq-inner{
   width: 90%;
+  margin-top: -10px;
+  z-index: 1;
 }
   .whatwedo .whatwedo-img {
     height: 380px;
     background-image: url(assets/img/whatwedo.png) ; background-size: 411px 280px;
   }
+  
+  .gplay{
+    width: 200px;
+    height: 80px;
+  }
+
+  .phone-img{
+    width: 180px;
+    height: 280px;
+  }
+
 
 
   .about-text p{
@@ -458,8 +482,8 @@ section {
  
 
   .about-img img{
-    width: 350px;
-    height: 450px;
+    width: 250px;
+    height: 350px;
     border-radius: 30px;
     margin-left: 20px;
   }
@@ -668,6 +692,20 @@ section {
 }
 
 @media (max-width: 575px) {
+
+  .fq{
+    margin-top: -50px;
+  }
+
+
+  .recybtn{
+  padding: 10px;
+    width: 150px;
+  }
+  
+.btm{
+  margin-top: -200px;
+ }
 
   .recycle{
     padding: 10px;
@@ -1394,12 +1432,12 @@ body{margin-top:20px;
   margin-bottom: 100px;
 }
 .button .donate{
-  width: 400px;
+  width: 200px;
   background-color: #7BA717;
   color: white;
-  padding: 30px;
-  font-size: 32px;
-  border-radius: 50px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 30px;
   border: none;
 }
 
@@ -1410,17 +1448,21 @@ body{margin-top:20px;
 }
 
 .join-button .join-team{
-  width: 400px;
+  width: 200px;
   background-color: #7BA717;
   color: white;
-  height: 100px;
-  font-size: 32px;
-  border-radius: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 30px;
   border: none;
 }
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
+
+.why-us{
+  margin-top: -200px;
+}
 
 .why-us .container{
   box-shadow: 0px 6px 80px rgba(178, 180, 178, 0.25);
@@ -1618,6 +1660,11 @@ body{margin-top:20px;
   }
 
 
+  .join-button{
+    display: flex;
+    justify-content: center;
+  }
+  
  .dhero {
   display: none;
 }
@@ -1632,8 +1679,9 @@ body{margin-top:20px;
   }
 
   .gal .example-image-link .example-image{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     
   }
 
@@ -1847,13 +1895,26 @@ body{margin-top:20px;
 }
 
 .Ourteam{
-  margin-top: 200px;
+  margin-top: 50px;
   text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.Ourteam .Ourteam-cont{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .Ourteam h1{
   font-size: 40px;
   font-weight: 700px;
+}
+
+.tt{
+  width: 70%;
 }
 
 .Ourteam h1 span{
@@ -1867,16 +1928,21 @@ body{margin-top:20px;
   justify-content: center;
   flex-wrap: wrap;
 
+  
+
 }
+
+
 
 .team-inner{
   text-align: center;
   line-height: px;
 }
 
+
 .team-item{
-  width: 376px;
-  height: 456px;
+  width: 276px;
+  height: 356px;
   background-color: #292929;
   margin: 50px;
 }
@@ -1959,6 +2025,8 @@ body{margin-top:20px;
 
 }
 
+
+
 .faq .container{
   display: flex;
   justify-content: center;
@@ -1970,7 +2038,7 @@ body{margin-top:20px;
 
 .faq{
   background-color: #F0F9E3;
-  margin-top: -100px;
+  margin-top: -120px;
 }
 
 
@@ -2297,9 +2365,11 @@ body{margin-top:20px;
 }
 
 
+
+
 .gal img {
   width: 150px;
-  height: 100px;
+  height: 120px;
   margin: 20px;
   border-radius: 20px;
 }
@@ -2687,9 +2757,9 @@ h1 span{
 .wave{
   background: url("../img/wave.png") no-repeat;
   background-size: cover;
-  margin-top: -100px;
+  margin-top: -8%;
   width: 100%;
-  height: 600px;
+  height: 400px;
   display: grid;
   place-items: end center;
   padding-bottom: 100px;
@@ -2697,11 +2767,11 @@ h1 span{
 }
 
 .wave1{
-  background: url("../img/wave1.png") no-repeat;
+  background: url("../img/wave.png") no-repeat;
   background-size: cover;
-  margin-top: -100px;
+  margin-top: -50px;
   width: 100%;
-  height: 400px;
+  height: 200px;
   display: grid;
   place-items: end center;
   padding-bottom: 100px;
@@ -2848,8 +2918,11 @@ h1 span{
 
 
 .sdgs{
+  background-image: url(assets/img/IMG_2128\ 1.png) ; 
   height: 300px;
   margin-bottom: 100px;
+  background: no-repeat center center;
+  background-size: cover;
 }
 
 .gal1{
@@ -2883,7 +2956,7 @@ h1 span{
 .slider {
  display: grid;
  place-items: center;
- margin-top: 250px;
+ margin-top: 200px;
   padding: 3em 2em;
 }
 
