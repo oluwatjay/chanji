@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog</title>
+  <title>Bottles for Books</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -67,40 +67,67 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center"
-    style="background-color:  #7BA717 ; background-size: 100% 580px; margin-top: 100px;">
-    <div class="container" style="display: grid; place-items:center;">
-      <h2 style="color: white;">Blog</h2>
+
+  <header class="masthead">
+    <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="page-heading">
+            <h1></h1>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-  </section><!-- End Hero Section -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
-    integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
-
-  <div class="container mt-100 mt-60">
+  </header>
 
 
-    <div class="row blog-row">
+  <main id="main" style="margin-top: 50px;">
+    <div class="container mt-3">
 
-    </div><!--end col-->
+      <div class="campaign-sub-title">
 
-
-  </div><!--end row-->
-  <div class="recycle">
-    <div class="recycle-inner">
-
-      <div class="recycle-text">
-        <h3>
-          Recycle from the comfort of your home
-        </h3>
-        <p>Recykoin pays you to recycle, with ease</p>
       </div>
 
+      <div class="campaign-body">
+
+      </div>
+
+
+
     </div>
-    <button class="recybtn">Get Recykoin</button>
-  </div>
-  </div>
+
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+
+          <h3>Slideshow for our beneficiaries</span></h3>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <div class="button">
+      <button class="donate campaign-donate-button">
+        Donate waste
+      </button>
+    </div>
+    <!-- ======= Contact Section ======= -->
+
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer class="text-center text-lg-start bg-white text-muted">
@@ -234,74 +261,51 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
   <script>
-
     $(document).ready(function () {
-      $.ajax({
-        url: "https://admin.chanjadatti.com/api/posts",
-        method: "GET",
-        contentType: "application/json",
-        // data: formData,
-
-        success: function (response) {
-          console.log(response)
-          let res = response.data
-
-          res.map((data, key) => {
-            let item = `<div class="col-lg-4 col-md-6 mt-4 pt-2">
-            <div class="blog-post rounded border">
-                <div class="blog-img d-block overflow-hidden position-relative">
-                    <img class="blog-img" src="${data.featured_image}" class="img-fluid rounded-top" alt="">
-                    <div class="overlay rounded-top bg-dark"></div>
-                   
-                </div>
-                <div class="content p-3">
-                    <div class="d-flex justify-content-between">
-                      <small class="text-muted">${data.date}</small>
-                      <small><a href="post.html?title=${data.slug}" class="text-primary">${data.category}</a></small>
-                    </div>
-
-                    <h4 class="mt-2"><a href="post.html?title=${data.slug}" class="text-dark title">${data.title}</a></h4>
-                    <p class="text-muted mt-2">${data.excerpt}</p>
-                    <div class="pt-3 mt-3 border-top d-flex">
-                      
-                        <div class="d-flex"  style="margin-top: 20px;">
-                            <a href="post.html?title=${data.slug}" class="btn-readmore">Read more...</a>
-                           
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`
-
-            $(".blog-row").append(item)
-          })
-        },
-        error: function (response) {
-          console.log(response)
-        }
-      })
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var title = url.searchParams.get("title");
 
       $.ajax({
-        url: "https://admin.chanjadatti.com/api/about-us",
+        url: `https://admin.chanjadatti.com/api/campaigns/${title}`,
         method: "GET",
         contentType: "application/json",
         // data: formData,
 
         success: function (res) {
-          console.log(res.body)
+          console.log(res)
 
-          let item = res.body
-          $(".about-text").append(item)
-        },
+          $(".page-heading h1").html(res.title)
+          $(".campaign-sub-title").html(res.sub_title)
+          $(".campaign-body").html(res.body)
+          $(".masthead").css("background-image", `url(${res.img})`)
+          $(".campaign-donate-button").html(res.button_name)
+
+          let ben = res.beneficiary
+
+          ben.map((data, key) => {
+            let slide = `<div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href=${data}>
+                <img src=${data} class="img-fluid" alt="">
+              </a>
+            </div>`
+            $(".swiper-wrapper").append(slide)
+          })
+
+          
+
+
+
+        }
+        ,
         error: function (response) {
           console.log(response)
         }
       })
+
     });
   </script>
-
 </body>
 
 </html>

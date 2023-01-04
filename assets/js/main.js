@@ -4,6 +4,69 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+$(document).ready(function () {
+  $.ajax({
+    url: `https://admin.chanjadatti.com/api/campaigns`,
+    method: "GET",
+    contentType: "application/json",
+    // data: formData,
+
+    success: function (response) {
+      console.log(response)
+
+      response.map((data, key) => {
+
+        let li = `<li><a href="campaigns.html?title=${data.slug}">${data.title}</a></li>`
+
+        $(".campaigns-dropdown").append(li)
+      })
+    },
+    error: function (response) {
+      console.log(response)
+    }
+  })
+
+  $("#newsletter-form").on("submit", (e) => {
+    e.preventDefault()
+    let email = $("#email").val()
+    console.log(email)
+
+    let data = {
+      email
+    }
+
+    formData = JSON.stringify(data)
+
+    $.ajax({
+      url: `https://admin.chanjadatti.com/api/subscribe`,
+      method: "POST",
+      data: formData,
+      contentType: "application/json",
+      // data: formData,
+  
+      success: function (res) {
+        console.log(res)
+  
+        if (res.code == 421 && res.status == false) {
+          let data = res.data
+          $("#newsletter-alert-success").html("")
+          $("#newsletter-alert-error").html(`${res.message}: ${data.email[0]}`)
+        }
+        else if (res.code == 200 && res.status == true){
+          $("#newsletter-alert-success").html(res.message)
+          $("#newsletter-alert-error").html(``)
+        }
+      },
+      error: function (response) {
+        console.log(response)
+      }
+    })
+  })
+
+})
+
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -59,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
       mobileNavToogle();
     })
@@ -95,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -113,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);

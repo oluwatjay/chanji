@@ -51,9 +51,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="whatwedo.html">What we do</a></li>
           <li class="dropdown"><a href="#"><span>Campaigns</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="bottles.html">Bottles for books</a></li>
-              <li><a href="wrei.html">WREI</a></li>
+            <ul class="campaigns-dropdown">
             </ul>
 
             <li><a href="blog.html">Blog</a></li>
@@ -298,13 +296,17 @@ Abuja, FCT, Nigeria.
           <h6 class="text-uppercase fw-bold mb-4">
             Subscribe to our newsletter
           </h6>
-          <form action="#" class="row flex-fill">
+          <form action="#" class="row flex-fill mb-5" id="newsletter-form">
             <div class="col-lg-7 my-md-2 my-2">
-              <input type="email" class="form-control px-4 border-1 w-100 text-center text-md-left" id="email" placeholder="Your Email" name="email" style="border-radius: none;">
+              <input type="email" class="form-control px-4 border-1 w-100 text-center text-md-left" id="email"
+                placeholder="Your Email" name="email" style="border-radius: none;">
             </div>
             <div class="col-lg-5 my-md-2 my-2">
-              <button  type="submit" class="newsletter-btn btn-lg border-0 w-50"><i class="fa-regular fa-paper-plane"></i></button>
+              <button type="submit" class="newsletter-btn btn-lg border-0 w-50"><i
+                  class="fa-regular fa-paper-plane"></i></button>
             </div>
+            <div class="d-flex text-success" id="newsletter-alert-success"></div>
+            <div class="d-flex text-danger" id="newsletter-alert-error"></div>
           </form>
           <div class="socials">
             <h6>Follow Us: </h6>
@@ -338,6 +340,7 @@ Abuja, FCT, Nigeria.
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/fdfc6b7a0c.js" crossorigin="anonymous"></script>
   <!-- Vendor JS Files -->
   <script src="assets/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
@@ -350,6 +353,7 @@ Abuja, FCT, Nigeria.
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
 
 </body>
 
