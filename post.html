@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog</title>
+  <title>Inner blog</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -67,26 +67,78 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center"
-    style="background-color:  #7BA717 ; background-size: 100% 580px; margin-top: 100px;">
-    <div class="container" style="display: grid; place-items:center;">
-      <h2 style="color: white;">Blog</h2>
-    </div>
+
+  <div class="container" style="display: grid; place-items:center;">
+    <h2 style="color: white;">Blog</h2>
+  </div>
 
   </section><!-- End Hero Section -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
     integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
 
-  <div class="container mt-100 mt-60">
+
+  <div class="blog-post-content">
+    <section class="blog1 p-md-5 p-xs-3" style="height: 500px;">
+      <div class="row">
+        <div class="blog-left col-md-6">
+          <h1 class="blog-title">
+          </h1>
+          <small class="excerpts text-muted mt-3">
+          </small>
+          <p class="date mt-3 fw-bold">
+            <small>
+
+            </small>
+            <small class="text-info">
+            </small>
+          </p>
+        </div>
+        <div class="blog-image col-md-6">
+        </div>
+      </div>
+
+      <div class="blog-text">
+      </div>
+
+    </section>
+  </div>
 
 
-    <div class="row blog-row">
+  <div class="container mt-100 mt-60" style="margin-top: 100px;">
+    <hr>
 
-    </div><!--end col-->
+    <h1>You might also like</h1>
+    <div class="row" id="related-posts">
+      <div class="col-lg-4 col-md-6 mt-4 pt-2">
+        <div class="blog-post rounded border">
+          <div class="blog-img d-block overflow-hidden position-relative">
+            <img class="blog-img" src="https://via.placeholder.com/350x280/FF7F50/000000" class="img-fluid rounded-top"
+              alt="">
+            <div class="overlay rounded-top bg-dark"></div>
 
+          </div>
+          <div class="content p-3">
+            <small class="text-muted p float-right">19th Oct, 19</small>
+            <small><a href="javascript:void(0)" class="text-primary">Marketing</a></small>
+            <h4 class="mt-2"><a href="javascript:void(0)" class="text-dark title">Quick guide on business with
+                friends.</a></h4>
+            <p class="text-muted mt-2">There is now an abundance of readable dummy texts. These are usually used when a
+              text is required purely to fill a space.</p>
+            <div class="pt-3 mt-3 border-top d-flex">
 
-  </div><!--end row-->
+              <div class="d-flex" style="margin-top: 20px;">
+                <a href="#" class="btn-readmore">Read more...</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <div class="recycle">
     <div class="recycle-inner">
 
@@ -235,20 +287,72 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
 
+  <script>
     $(document).ready(function () {
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var title = url.searchParams.get("title");
+
       $.ajax({
-        url: "https://admin.chanjadatti.com/api/posts",
+        url: `https://admin.chanjadatti.com/api/posts/${title}`,
+        method: "GET",
+        contentType: "application/json",
+        // data: formData,
+
+        success: function (response) {
+          // console.log(response)
+          let data = response
+
+          let item = `<section class="blog1 p-md-5 p-xs-3">
+                          <div class="row">
+                            <div class="blog-left col-md-6">
+                              <h1 class="blog-title">
+                                  ${data.title}
+                              </h1>
+                              <small class="excerpts text-muted mt-3">
+                                ${data.excerpt}
+                              </small>
+                              <p class="date mt-3 fw-bold">
+                                <small>
+                                  
+                                </small>
+                                <small class="text-info">
+                                  ${data.category}
+                                </small>
+                              </p>
+                            </div>
+                            <div class="blog-image col-md-6">
+                              <img class="img-fluid img-rounded" src="${data.img}" alt="">
+                            </div>
+                          </div>
+
+                          <div class="blog-text">
+                            ${data.body}
+                          </div>
+
+                        </section>`
+
+          $(".blog-post-content").html(item)
+
+        }
+        ,
+        error: function (response) {
+          console.log(response)
+        }
+      })
+
+
+      $.ajax({
+        url: `https://admin.chanjadatti.com/api/related-posts/${title}`,
         method: "GET",
         contentType: "application/json",
         // data: formData,
 
         success: function (response) {
           console.log(response)
-          let res = response.data
 
-          res.map((data, key) => {
+          response.map((data, key) => {
             let item = `<div class="col-lg-4 col-md-6 mt-4 pt-2">
             <div class="blog-post rounded border">
                 <div class="blog-img d-block overflow-hidden position-relative">
@@ -275,7 +379,7 @@
                 </div>
             </div>`
 
-            $(".blog-row").append(item)
+            $("#related-posts").append(item)
           })
         },
         error: function (response) {
@@ -283,22 +387,6 @@
         }
       })
 
-      $.ajax({
-        url: "https://admin.chanjadatti.com/api/about-us",
-        method: "GET",
-        contentType: "application/json",
-        // data: formData,
-
-        success: function (res) {
-          console.log(res.body)
-
-          let item = res.body
-          $(".about-text").append(item)
-        },
-        error: function (response) {
-          console.log(response)
-        }
-      })
     });
   </script>
 
